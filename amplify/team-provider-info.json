@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "ifs-beta-dev-20190610095314-authRole",
+            "UnauthRoleArn": "arn:aws:iam::387054512966:role/ifs-beta-dev-20190610095314-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::387054512966:role/ifs-beta-dev-20190610095314-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "ifs-beta-dev-20190610095314-deployment",
+            "UnauthRoleName": "ifs-beta-dev-20190610095314-unauthRole",
+            "StackName": "ifs-beta-dev-20190610095314",
+            "StackId": "arn:aws:cloudformation:eu-west-1:387054512966:stack/ifs-beta-dev-20190610095314/2ef3cda0-8b5d-11e9-952e-069f6d7e1780"
+        }
+    }
+}

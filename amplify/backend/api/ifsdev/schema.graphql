@@ -1,0 +1,59 @@
+type User @model {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+  applications: [Application] @connection
+}
+
+type Organisation @model{
+  id: ID!
+  name: String!
+  type: OrganisationType
+}
+
+type Competition @model{
+  id: ID!
+  createdAt: AWSDateTime!
+  description: String!
+  title: String!
+  fundingType: String!
+  projectSize: String!
+  openTime : AWSDateTime!
+  closeTime: AWSDateTime!
+  open: Boolean!
+}
+
+type Application @model{
+  id: ID!
+  name: String!
+  user: User!
+  Status: ApplicationStatus
+  organisations: [Organisation] @connection
+  competition: Competition @connection
+  questions: [Question] @connection
+}
+
+type Question @model{
+  id: ID!
+  title: String!
+  description: String!
+  display: Boolean!
+  answer: String!
+  complete: Boolean!
+}
+
+enum ApplicationStatus{
+  IN_PROGRESS
+  SUBMITTED
+  NOT_SUBMITTED
+  SUCCESS
+}
+
+enum OrganisationType{
+  BUSINESS
+  RESEARCH
+  RTO
+  NOT_FOR_PROFIT
+}
+
